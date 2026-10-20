@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>买 喷灌机 · 农哈哈田园部销售通讯录</title>
+  <meta name="description" content="河北农哈哈机械集团田园部销售服务通讯录，按区域为您对接 6 名业务员，买喷灌机就找对人。" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="public/logo.png" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand-row">
+        <span class="brand-mark"><img src="public/logo.png" alt="农哈哈" /></span>
+        <span class="brand-name">河北农哈哈机械集团 · 田园部</span>
+      </div>
+      <h1>
+        <span class="buy">买</span>
+        <em>喷灌机</em>
+      </h1>
+      <p class="hero-sub">田园部销售服务通讯录 · 6 名业务员，按您所在的区域，直接对接负责的人。</p>
+      <div class="hero-meta">
+        <span class="meta-pill" id="metaTotal">— 名业务员</span>
+        <span class="meta-pill" id="metaUpdated"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-wrap">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
+      </svg>
+      <input id="q" type="search" inputmode="search" autocomplete="off" placeholder="输入省份 / 城市，例如：河北、潍坊、郑州、安徽" />
+      <button id="btnSearch" class="btn-search" type="button">查找</button>
+    </div>
+  </div>
+
+  <div class="chips" id="chips"></div>
+
+  <main>
+    <section id="introSection">
+      <div class="section-head">
+        <div class="section-title"><b>怎么用</b></div>
+      </div>
+      <p style="font-size:13.5px;line-height:1.8;color:var(--muted)">
+        在上方输入您所在的<strong>省份或城市</strong>（如「河北」「潍坊」「郑州」「安徽」），系统会立刻列出负责该区域的业务员与电话，支持一键拨号、复制号码。区域有划分，找对人更省心。
+      </p>
+    </section>
+
+    <section id="resultSection" hidden>
+      <div class="section-head">
+        <div class="section-title"><b id="resultTitle">查询结果</b></div>
+        <div class="view-toggle" id="viewToggle">
+          <button type="button" data-view="cards" class="on">卡片</button>
+          <button type="button" data-view="table">表格</button>
+        </div>
+      </div>
+      <div id="result"></div>
+      <div id="related"></div>
+    </section>
+
+    <section id="favSection" hidden style="margin-top:30px">
+      <div class="section-head">
+        <div class="section-title"><b>我的收藏</b></div>
+        <button id="clearFav" class="chip" type="button">清空</button>
+      </div>
+      <div class="cards" id="favList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-inner">
+      <div>
+        <strong>河北农哈哈机械集团有限公司 · 田园部</strong><br />
+        地址：河北省石家庄市深泽县北环路222号　邮编：052560<br />
+        销售热线：0311-87513850
+      </div>
+      <div style="text-align:right">农哈哈田园部 · 扫码即用</div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
